@@ -1,0 +1,27 @@
+{
+	"name": "@zlote-jajo-9lo/mono",
+	"private": true,
+	"license": "MPL-2.0",
+	"scripts": {
+		"bootstrap": "lerna bootstrap",
+		"build": "lerna run build",
+		"dev": "lerna run --parallel dev",
+		"format": "yarn run prettier --write \"./**/*.{ts,js,json,md}\"",
+		"lint": "yarn run eslint . --ext .ts,.tsx"
+	},
+	"devDependencies": {
+		"@pxseu/eslint-config": "^1.0.1",
+		"@pxseu/prettier-config": "^1.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.18.0",
+		"@typescript-eslint/parser": "^5.18.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"lerna": "^4.0.0",
+		"prettier": "^2.6.2"
+	},
+	"repository": {
+		"url": "https://github.com/pxseu/zlote-jajo-9lo"
+	},
+	"workspaces": [
+		"packages/*"
+	]
+}

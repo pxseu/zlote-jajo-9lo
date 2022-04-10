@@ -1,0 +1,6 @@
+{
+    "extends": "@pxseu/eslint-config/react",
+    "rules": {
+        "@typescript-eslint/indent": "off"
+    }
+}
