@@ -19,12 +19,6 @@ services:
         build:
             context: .
             dockerfile: ./packages/api/Dockerfile
-        environment:
-            - REDIS_HOST=cache
-            - REDIS_PORT=6379
-            - ENV_PATH=/run/secrets/PXSEU_API_ENV_FILE
-        secrets:
-            - PXSEU_API_ENV_FILE
         ports:
             - target: 80
         networks:
