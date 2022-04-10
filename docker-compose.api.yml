@@ -27,8 +27,6 @@ services:
             - PXSEU_API_ENV_FILE
         ports:
             - target: 80
-        depends_on:
-            - cache
         networks:
             - backend
         deploy:
