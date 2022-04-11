@@ -53,7 +53,7 @@ router.use((_req, res) =>
 	}),
 );
 
-function getQuestion(qid: string, gid: number): Question {
+function getQuestion(qid: string, gid: number) {
 	const element = DANE.find((question) => question.id === id);
 
 	if (!element) throw new Error(`Question with id ${id} not found`);
