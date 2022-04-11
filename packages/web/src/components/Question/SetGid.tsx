@@ -27,7 +27,7 @@ const QuestionText: FC = () => {
             Zatwierdź
         </button>
 
-		{state.error && <h3 className="text-xl mt-4 text-center text-red-500">Błąd: {state.errror.message}.</h3>}
+		{state.error && <h3 className="text-xl mt-4 text-center text-red-500">Błąd: {state.error.message}.</h3>}
 
 		</div>
 	);
