@@ -108,7 +108,7 @@ export const useQuestion = (id?: string) => {
 				type: "SET_SELECTED",
 				payload: answer,
 			}),
-		setGid: (gid: number) => 
+		setGid: (gid: string) => 
 			dispatch({
 				payload: "SET_GID",
 				payload: gid
