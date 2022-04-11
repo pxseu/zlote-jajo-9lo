@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { useState, FC } from "react";
 import { useQuestionCtx } from "../../hooks/useQuestion";
 
 const QuestionText: FC = () => {
@@ -16,7 +16,7 @@ const QuestionText: FC = () => {
 			</h1>
 
         <input type="number" onChange={(event) => setLocalId(event.target.value)} value={localId} />
-		
+
         <button onClick={() => {
 			state.setGid(localId)
 		}}>
