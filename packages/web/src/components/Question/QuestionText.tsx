@@ -15,8 +15,6 @@ const QuestionText: FC = () => {
 		return <div>Error: {state.error.message}</div>;
 	}
 
-	console.log(state.id);
-
 	return (
 		<div className="flex flex-col p-4 px-12 justify-center items-center w-full">
 			<h1 className="text-xl text-center max-w-full">

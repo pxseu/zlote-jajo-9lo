@@ -478,7 +478,90 @@ export const DANE: Question[] = [
 			},
 		],
 	},
+	{
+		id: "v4nHp2rO2bgY4jvQLHCFJOieA2HoXy",
+		num: 13,
+		questions: [
+			{
+				id: 1,
+				text: "Podaj film, który przyniósł największe zyski w historii.",
+				correct: "Avatar",
+				answers: null,
+			},
+			{
+				id: 2,
+				text: "Podaj serię filmów, które przyniósła największę zyski w historii.",
+				correct: "The Avengers",
+				answers: null,
+			},
+			{
+				id: 3,
+				text: "Podaj najlepiej sprzedającą się grę komputerową w historii.",
+				correct: "Tetris",
+				answers: null,
+			},
+		],
+	},
+	{
+		id: "mvua82UWBy98j2OZmkaYyAwOdmbUgf",
+		num: 14,
+		questions: [
+			{
+				id: 1,
+				text: "Kto jest twórcą Gangnam Style?",
+				correct: "PSY",
+				answers: null,
+			},
+			{
+				id: 2,
+				text: "Kiedy swoją premierę miała piosenka pt. Despacito?",
+				correct: "2017",
+				answers: null,
+			},
+			{
+				id: 3,
+				text: "Skąd jedzie pociąg?",
+				correct: "Z daleka",
+				answers: null,
+			},
+		],
+	},
+	{
+		id: "wE4Vg2xO0luMgV9RAgizHzNA8TIcuA",
+		num: 15,
+		questions: [
+			{
+				id: 1,
+				text: "Tlenek wodoru w mowie potocznej to?",
+				correct: "Woda",
+				answers: null,
+			},
+			{
+				id: 2,
+				text: "Ile krwi w organizmie ma przeciętny człowiek?",
+				correct: "Ok 5. litrów",
+				answers: null,
+			},
+			{
+				id: 3,
+				text: "Chlorek sodu w mowie potocznej to?",
+				correct: "Sól kuchenna",
+				answers: null,
+			},
+		],
+	},
 	// Staszki bellow
+	{
+		id: "VV-i33Wd0m10Ca28FOBKyGLv4682CgdYL",
+		num: 100,
+		questions: {
+			id: 1,
+			text: "Złoty Kod + 2 punkty\nHasło: saracatunga",
+			answers: null,
+			correct: null,
+			media: "image",
+		},
+	},
 	{
 		id: "VV-KaFTdazJAFeMtlEh49y20AyM2esEFc",
 		num: 101,
@@ -534,6 +617,18 @@ export const DANE: Question[] = [
 			media: "video",
 		},
 	},
+	{
+		id: "VV-mHBDW98eGadiKq6SyFYX8v7iA7O4h2",
+		num: 106,
+		questions: {
+			id: 1,
+			text: "Obejrzyj film",
+			answers: null,
+			correct: null,
+			media: "video",
+		},
+	},
+
 	// Cyberwojna
 	{
 		id: "VV-YK7mZ7YpIFxxEUgkd3uO2l3XBoMZsh",
