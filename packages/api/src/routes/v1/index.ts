@@ -62,5 +62,5 @@ function getQuestion(qid: string, gid: number) {
 	
 	if (!sub) throw new Error(`Invalid sub question`);
 	
-	return sub;
+	return { ...sub, id: `${element.num}-${sub.id}` };
 }

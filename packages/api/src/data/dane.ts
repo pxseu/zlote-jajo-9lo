@@ -1,5 +1,6 @@
 export interface Question {
   id: string;
+  num: number;
   questions: {
     id: number;
     text: string;
@@ -16,6 +17,7 @@ export interface Question {
 export const DANE: Question[] = [
   {
     id: "fMLktCCH5xN9grgzMzuZ2srqxdebkd",
+    num: 1,
     questions: [
       {
         id: 1,
@@ -27,6 +29,7 @@ export const DANE: Question[] = [
   },
   {
     id: "mffmM2fCPWScgq78ZCS94vbkm8dtnK",
+    num: 1,
     questions: [
       {
         id: 1,
