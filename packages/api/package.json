@@ -4,7 +4,7 @@
 	"main": "./dist/index.js",
 	"license": "MPL-2.0",
 	"scripts": {
-		"build": "yarn clean && yarn comp"
+		"build": "yarn clean && yarn comp",
 		"comp": "tsc -p tsconfig.json",
 		"clean": "rimraf dist",
 		"dev": "cross-env NODE_ENV=development nodemon --config nodemon.json",
