@@ -3,22 +3,31 @@ import { DANE, Question } from "../../data/dane.js";
 
 export const router = Router();
 
-router.get("/question/:id", async (req, res) => {
-	const { id } = req.params;
+router.get("/question/:qid", async (req, res) => {
+	const { qid } = req.params;
+	const { gid } = req.query;
 
-	if (typeof id !== "string")
+	if (typeof qid !== "string")
 		return res.status(400).json({
 			success: false,
 			data: null,
 			message: "Invalid question id",
 		});
+	
+	if (typeof gid !== "string" || isNaN(Number(gid)))
+		return res.status(400).json({
+			success: false,
+			data: null,
+			message: "Invalid group id",
+		});
+	
 
 	try {
-		const { text, answers } = getQuestion(id);
+		const { text, answers } = getQuestion(qid, Number(gid));
 
 		res.json({
 			success: true,
-			data: { id, text, answers },
+			data: { text, answers },
 		});
 	} catch (err) {
 		if (err instanceof Error)
@@ -44,10 +53,14 @@ router.use((_req, res) =>
 	}),
 );
 
-function getQuestion(id: string): Question {
+function getQuestion(qid: string, gid: number): Question {
 	const element = DANE.find((question) => question.id === id);
 
 	if (!element) throw new Error(`Question with id ${id} not found`);
 
-	return element;
+	const sub = DANE[gid % 3];
+	
+	if (!sub) throw new Error(`Invalid sub question`);
+	
+	return sub;
 }
