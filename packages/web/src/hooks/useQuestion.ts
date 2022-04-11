@@ -70,7 +70,7 @@ export const useQuestion = (id?: string) => {
 	}, [id, idQuestion]);
 
 	useEffect(() => {
-		if (!idQuestion || !gid) return;
+		if (!idQuestion || !state.gid) return;
 
 		let mounted = true;
 		const fetchData = async () => {
