@@ -58,7 +58,7 @@ function getQuestion(qid: string, gid: number) {
 
 	if (!element) throw new Error(`Question with id ${qid} not found`);
 
-	const sub = element.questions.find((quest) => quest.id === gid) as Question["questions"][0];
+	const sub = element.questions.find((quest) => quest.id === (gid - 1)) as Question["questions"][0];
 	
 	if (!sub) throw new Error(`Invalid sub question`);
 	
