@@ -5,6 +5,7 @@ import { useQuestion } from "../../hooks/useQuestion";
 import { GetPropsOfType } from "../../utils/type";
 import { CardLikeThing } from "../commons";
 import QuestionText from "./QuestionText";
+import SetGid from "./SetGid";
 
 export interface IQuestion {
 	id: string;
@@ -24,7 +25,8 @@ const Question: FC<GetPropsOfType<typeof motion.div>> = (props) => {
 	return (
 		<QuestionState.Provider value={question}>
 			<CardLikeThing {...props}>
-				<QuestionText />
+				{!!question.gid && <SetGid />}
+				{question.question && <QuestionText />}
 			</CardLikeThing>
 		</QuestionState.Provider>
 	);

@@ -7,6 +7,7 @@ interface State {
 	loading: boolean;
 	error: Error | null;
 	selected: string | null;
+	gid: number | null;
 }
 
 type Action =
@@ -21,7 +22,10 @@ type Action =
 	| {
 			type: "SET_SELECTED";
 			payload: string;
-	  };
+	} | {
+			type: "SET_GID";
+			payload: number;
+	};
 
 const reducer = (state: State, action: Action): State => {
 	switch (action.type) {
@@ -58,6 +62,7 @@ export const useQuestion = (id?: string) => {
 		loading: true,
 		error: null,
 		selected: null,
+		gid: null,
 	});
 
 	useEffect(() => {
@@ -65,12 +70,12 @@ export const useQuestion = (id?: string) => {
 	}, [id, idQuestion]);
 
 	useEffect(() => {
-		if (!idQuestion) return;
+		if (!idQuestion || !gid) return;
 
 		let mounted = true;
 		const fetchData = async () => {
 			try {
-				const response = await fetch(`${API_URL}/v1/question/${idQuestion}`);
+				const response = await fetch(`${API_URL}/v1/question/${idQuestion}?gid=${encodeURIComponent(state.gid)}`);
 
 				const { data, message } = await response.json();
 
@@ -94,7 +99,7 @@ export const useQuestion = (id?: string) => {
 		return () => {
 			mounted = false;
 		};
-	}, [idQuestion]);
+	}, [idQuestio, state.gid]);
 
 	return {
 		...state,
@@ -103,6 +108,11 @@ export const useQuestion = (id?: string) => {
 				type: "SET_SELECTED",
 				payload: answer,
 			}),
+		setGid: (gid: number) => 
+			dispatch({
+				payload: "SET_GID",
+				payload: gid
+			})
 	};
 };
 
