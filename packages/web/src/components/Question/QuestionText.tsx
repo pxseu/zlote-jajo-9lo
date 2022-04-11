@@ -25,9 +25,15 @@ const QuestionText: FC = () => {
 
 			<h1 className="text-2xl text-center mt-2 whitespace-pre-line">{state.question!.text}</h1>
 
-			{state.question?.media && (
+			{state.question?.media === "video" && (
 				<div className="mt-4">
-					<video controls src={MEDIA_URL(state.id!)} className="w-full" />
+					<video controls src={MEDIA_URL(state.question?.media, state.id!)} className="w-full" />
+				</div>
+			)}
+
+			{state.question?.media === "image" && (
+				<div className="mt-4">
+					<img src={MEDIA_URL(state.question?.media, state.id!)} className="w-full" alt="" />
 				</div>
 			)}
 

@@ -71,7 +71,8 @@ function getQuestion(qid: string, gid: number) {
 
 	if (!element) throw new Error(`Question with id ${qid} not found`);
 
-	if (!Array.isArray(element.questions)) return element.questions;
+	if (!Array.isArray(element.questions))
+		return { ...element.questions, id: `${element.num}-${element.questions.id}` };
 
 	const sub = element.questions.find((quest) => quest.id === ((gid - 1) % 3) + 1) as Qsts;
 
