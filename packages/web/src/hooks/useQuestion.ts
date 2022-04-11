@@ -51,6 +51,18 @@ const reducer = (state: State, action: Action): State => {
 				selected: action.payload,
 			};
 
+		case "SET_GID":
+			const gidAsNum = Number(action.payload)
+			if (isNaN(gidAsNum) || gidAsNum < 1) return {
+				...state,
+				error: new Error("Numer grupy musi być cyfrą większą od zera")
+			}
+
+			return {
+				...state,
+				gid: action.payload
+			}
+
 		default:
 			return state;
 	}
