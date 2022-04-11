@@ -21,7 +21,7 @@ const QuestionText: FC = () => {
 			<h1 className="text-2xl text-center mt-2">{state.question!.text}</h1>
 
 			<div className="w-full">
-				{state.question!.answers.map((answer) => (
+				{state.question.answers && state.question.answers.map((answer) => (
 					<Answer key={`${state.question!.id}-${answer.id}`} {...answer} />
 				))}
 			</div>
