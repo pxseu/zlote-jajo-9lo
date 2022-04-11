@@ -7,16 +7,16 @@ import { CardLikeThing } from "../commons";
 import QuestionText from "./QuestionText";
 import SetGid from "./SetGid";
 
+export interface Answer {
+	id: string;
+	text: string;
+}
+
 export interface Question {
 	id: string;
 	text: string;
 	correct: string;
-	answers:
-	| {
-		id: string;
-		text: string;
-	}[]
-	| null;
+	answers: Answer[] | null;
 }
 
 export const QuestionState = createContext<ReturnType<typeof useQuestion> | null>(null);
