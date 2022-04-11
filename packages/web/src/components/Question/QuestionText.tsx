@@ -18,7 +18,7 @@ const QuestionText: FC = () => {
 			<h1 className="text-xl text-center max-w-full">
 				Pytanie <code className="bg-gray-500/40 rounded-md px-1 break-words">#{state.question!.id}</code>
 			</h1>
-			<h1 className="text-2xl text-center mt-2">{state.question!.text}</h1>
+			<h1 className="text-2xl text-center mt-2 whitespace-pre-line">{state.question!.text}</h1>
 
 			<div className="w-full">
 				{state.question?.answers && state.question!.answers!.map((answer) => (
