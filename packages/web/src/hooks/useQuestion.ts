@@ -22,10 +22,11 @@ type Action =
 	| {
 			type: "SET_SELECTED";
 			payload: string;
-	} | {
+	  }
+	| {
 			type: "SET_GID";
 			payload: string;
-	};
+	  };
 
 const reducer = (state: State, action: Action): State => {
 	switch (action.type) {
@@ -52,24 +53,25 @@ const reducer = (state: State, action: Action): State => {
 			};
 
 		case "SET_GID":
-			const gidAsNum = Number(action.payload)
-			if (isNaN(gidAsNum) || gidAsNum < 1) return {
-				...state,
-				error: new Error("Numer grupy musi być cyfrą większą od zera"),
-			}
+			const gidAsNum = Number(action.payload);
+			if (isNaN(gidAsNum) || gidAsNum < 1)
+				return {
+					...state,
+					error: new Error("Numer grupy musi być cyfrą większą od zera"),
+				};
 
 			return {
 				...state,
 				gid: action.payload,
 				error: null,
-			}
+			};
 
 		default:
 			return state;
 	}
 };
 export const useQuestion = (id?: string) => {
-	const [idQuestion, setIdQuestion] = useState<string | null>(null);
+	const [idQuestion, setIdQuestion] = useState<string | null>("");
 	const [state, dispatch] = useReducer(reducer, {
 		question: null,
 		loading: true,
@@ -88,7 +90,9 @@ export const useQuestion = (id?: string) => {
 		let mounted = true;
 		const fetchData = async () => {
 			try {
-				const response = await fetch(`${API_URL}/v1/question/${idQuestion}?gid=${encodeURIComponent(state.gid || "")}`);
+				const response = await fetch(
+					`${API_URL}/v1/question/${idQuestion}?gid=${encodeURIComponent(state.gid || "")}`,
+				);
 
 				const { data, message } = await response.json();
 
@@ -116,16 +120,17 @@ export const useQuestion = (id?: string) => {
 
 	return {
 		...state,
+		id: idQuestion,
 		selectAnswer: (answer: string) =>
 			dispatch({
 				type: "SET_SELECTED",
 				payload: answer,
 			}),
-		setGid: (gid: string) => 
+		setGid: (gid: string) =>
 			dispatch({
 				type: "SET_GID",
-				payload: gid
-			})
+				payload: gid,
+			}),
 	};
 };
 

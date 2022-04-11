@@ -17,6 +17,7 @@ export interface IQuestion {
 	text: string;
 	correct: string;
 	answers: Answer[] | null;
+	media: boolean;
 }
 
 export const QuestionState = createContext<ReturnType<typeof useQuestion> | null>(null);

@@ -3,11 +3,12 @@ import Header from "./components/Header";
 import { motion, Variants } from "framer-motion";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Question from "./components/Question";
+import Home from "./components/Home";
 
 const LoadVariants: Variants = {
 	hidden: {
 		opacity: 0,
-		y: -100,
+		y: -30,
 	},
 	visible: {
 		opacity: 1,
@@ -29,15 +30,14 @@ const App: FC = () => (
 				animate="visible"
 				initial="hidden"
 				transition={{
-					staggerChildren: 0.6,
+					staggerChildren: 0.3,
 				}}
 			>
 				<Header variants={LoadVariants} />
 
 				<Routes>
-					<Route path="/" element={<h1>Home</h1>} />
 					<Route path="/q/:id" element={<Question variants={LoadVariants} />} />
-					<Route path="*" element={<h1>bruh</h1>} />
+					<Route path="*" element={<Home variants={LoadVariants} />} />
 				</Routes>
 			</motion.div>
 		</div>
