@@ -55,12 +55,13 @@ const reducer = (state: State, action: Action): State => {
 			const gidAsNum = Number(action.payload)
 			if (isNaN(gidAsNum) || gidAsNum < 1) return {
 				...state,
-				error: new Error("Numer grupy musi być cyfrą większą od zera")
+				error: new Error("Numer grupy musi być cyfrą większą od zera"),
 			}
 
 			return {
 				...state,
-				gid: action.payload
+				gid: action.payload,
+				error: null,
 			}
 
 		default:
