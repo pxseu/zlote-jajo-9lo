@@ -12,7 +12,7 @@ export interface Answer {
 	text: string;
 }
 
-export interface Question {
+export interface IQuestion {
 	id: string;
 	text: string;
 	correct: string;

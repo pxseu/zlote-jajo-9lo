@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Question, Answer as IAnswer} from ".";
+import { Answer as IAnswer} from ".";
 import { useQuestionCtx } from "../../hooks/useQuestion";
 import Answer from "./Anwser";
 
