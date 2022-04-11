@@ -58,7 +58,7 @@ function getQuestion(qid: string, gid: number) {
 
 	if (!element) throw new Error(`Question with id ${qid} not found`);
 
-	const sub = DANE[gid % 3];
+	const sub = element[gid % 3];
 	
 	if (!sub) throw new Error(`Invalid sub question`);
 	
