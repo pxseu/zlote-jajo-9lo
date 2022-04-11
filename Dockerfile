@@ -12,7 +12,7 @@ ENV PORT 80
 
 RUN yarn build
 
-RUN yarn install --production --frozen-lockfile --non-interactive --prefer-offline
+RUN yarn install --production
 
 EXPOSE 80
 
