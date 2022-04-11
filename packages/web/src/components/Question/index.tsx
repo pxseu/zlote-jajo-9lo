@@ -25,7 +25,7 @@ const Question: FC<GetPropsOfType<typeof motion.div>> = (props) => {
 	return (
 		<QuestionState.Provider value={question}>
 			<CardLikeThing {...props}>
-				{!!question.gid && <SetGid />}
+				{!question.gid && <SetGid />}
 				{question.question && <QuestionText />}
 			</CardLikeThing>
 		</QuestionState.Provider>
