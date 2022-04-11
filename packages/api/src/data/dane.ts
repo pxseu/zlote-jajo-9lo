@@ -406,35 +406,81 @@ export const DANE: Question[] = [
 			},
 		],
 	},
-	// {
-	// 	id: "myPRQkDDUTT1eu3EySPNLz9xOQQuk0",
-	// 	num: 10,
-	// 	questions: [],
-	// },
-	// {
-	// 	id: "Iqm4a3h76o8sE0YxgJUXUBL0q1CuHc",
-	// 	num: 11,
-	// 	questions: [],
-	// },
-	// {
-	// 	id: "idoi1g1gbL1HllzvxM31fV7ZzWMPuH",
-	// 	num: 12,
-	// 	questions: [],
-	// },
+	{
+		id: "myPRQkDDUTT1eu3EySPNLz9xOQQuk0",
+		num: 10,
+		questions: [
+			{
+				id: 1,
+				text: "Wiek najstarszego syna Cristiano Ronaldo?",
+				correct: "11 lat",
+				answers: null,
+			},
+			{
+				id: 2,
+				text: "Wiek starszej córki Roberta Lewandowskiego?",
+				correct: "4 lata",
+				answers: null,
+			},
+			{
+				id: 3,
+				text: "Wiek najstarszefgo syna Lionela Messiego?",
+				correct: "9 lat",
+				answers: null,
+			},
+		],
+	},
+	{
+		id: "Iqm4a3h76o8sE0YxgJUXUBL0q1CuHc",
+		num: 11,
+		questions: [
+			{
+				id: 1,
+				text: "Jaki jest najmniejszy ptak na świecie?",
+				correct: "Koliber",
+				answers: null,
+			},
+			{
+				id: 2,
+				text: "Jaki jest najmniejszy ssak na świecie?",
+				correct: "Ryjówka",
+				answers: null,
+			},
+			{
+				id: 2,
+				text: "Jaki jest najmniejszy gad na świecie?",
+				correct: "Kameleon",
+				answers: null,
+			},
+		],
+	},
+	{
+		id: "idoi1g1gbL1HllzvxM31fV7ZzWMPuH",
+		num: 12,
+		questions: [
+			{
+				id: 1,
+				text: "Rok powstania Facebooka.",
+				correct: "2004",
+				answers: null,
+			},
+			{
+				id: 2,
+				text: "Rok powstania Instagrama.",
+				correct: "2010",
+				answers: null,
+			},
+			{
+				id: 3,
+				text: "Rok powstania Snapchata.",
+				correct: "2011",
+				answers: null,
+			},
+		],
+	},
 	// Staszki bellow
 	{
 		id: "VV-KaFTdazJAFeMtlEh49y20AyM2esEFc",
-		num: 100,
-		questions: {
-			id: 1,
-			text: "Obejrzyj film",
-			answers: null,
-			correct: null,
-			media: "video",
-		},
-	},
-	{
-		id: "VV-9ow9ELjNlMGVQPlF5khGuerIsw4tfb",
 		num: 101,
 		questions: {
 			id: 1,
@@ -445,8 +491,41 @@ export const DANE: Question[] = [
 		},
 	},
 	{
-		id: "VV-jUBdbRjwtAnc11BMzYUpWcY48TJkP1",
+		id: "VV-9ow9ELjNlMGVQPlF5khGuerIsw4tfb",
 		num: 102,
+		questions: {
+			id: 1,
+			text: "Obejrzyj film",
+			answers: null,
+			correct: null,
+			media: "video",
+		},
+	},
+	{
+		id: "VV-jUBdbRjwtAnc11BMzYUpWcY48TJkP1",
+		num: 103,
+		questions: {
+			id: 1,
+			text: "Obejrzyj film",
+			answers: null,
+			correct: null,
+			media: "video",
+		},
+	},
+	{
+		id: "VV-RZ3p3SU7kSEb9WT6hv8UPLkebEqnAC",
+		num: 104,
+		questions: {
+			id: 1,
+			text: "Obejrzyj film",
+			answers: null,
+			correct: null,
+			media: "video",
+		},
+	},
+	{
+		id: "VV-Xxt63WuDXOXjWiBx5a7cfEE7l5es3R",
+		num: 105,
 		questions: {
 			id: 1,
 			text: "Obejrzyj film",

@@ -17,6 +17,18 @@ router.get("/question/all-internal-use-only", (_req, res, next) => {
 	});
 });
 
+router.get("/question/qr-internal-use-only", (_req, res, next) => {
+	if (!INTERNAL) return next();
+
+	res.json({
+		success: true,
+		data: DANE.map(
+			({ id }) =>
+				`https://chart.googleapis.com/chart?chs=500x500&cht=qr&chl=https://zlote-jajo.pxseu.com/q/${id}`,
+		),
+	});
+});
+
 router.get("/question/:qid", (req, res) => {
 	const { qid } = req.params;
 	const { gid } = req.query;
@@ -78,5 +90,5 @@ function getQuestion(qid: string, gid: number) {
 
 	if (!sub) throw new Error(`Invalid sub question`);
 
-	return { ...sub, id: `${element.num}-${sub.id}` };
+	return { ...sub, id: `${element.num}` };
 }
