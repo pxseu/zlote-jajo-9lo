@@ -23,11 +23,11 @@ router.get("/question/:qid", async (req, res) => {
 	
 
 	try {
-		const { text, answers } = getQuestion(qid, Number(gid));
+		const { id, text, answers } = getQuestion(qid, Number(gid));
 
 		res.json({
 			success: true,
-			data: { text, answers },
+			data: { id, text, answers },
 		});
 	} catch (err) {
 		if (err instanceof Error)
