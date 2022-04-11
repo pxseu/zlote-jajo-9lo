@@ -54,9 +54,9 @@ router.use((_req, res) =>
 );
 
 function getQuestion(qid: string, gid: number) {
-	const element = DANE.find((question) => question.id === id);
+	const element = DANE.find((question) => question.id === qid);
 
-	if (!element) throw new Error(`Question with id ${id} not found`);
+	if (!element) throw new Error(`Question with id ${qid} not found`);
 
 	const sub = DANE[gid % 3];
 	
