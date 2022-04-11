@@ -75,7 +75,7 @@ export const useQuestion = (id?: string) => {
 		let mounted = true;
 		const fetchData = async () => {
 			try {
-				const response = await fetch(`${API_URL}/v1/question/${idQuestion}?gid=${encodeURIComponent(state.gid)}`);
+				const response = await fetch(`${API_URL}/v1/question/${idQuestion}?gid=${encodeURIComponent(state.gid || "")}`);
 
 				const { data, message } = await response.json();
 
