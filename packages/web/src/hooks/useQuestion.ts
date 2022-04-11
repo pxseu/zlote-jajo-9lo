@@ -110,7 +110,7 @@ export const useQuestion = (id?: string) => {
 			}),
 		setGid: (gid: string) => 
 			dispatch({
-				payload: "SET_GID",
+				type "SET_GID",
 				payload: gid
 			})
 	};
