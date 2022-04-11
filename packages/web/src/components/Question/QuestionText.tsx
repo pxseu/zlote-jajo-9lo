@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Answer as IAnswer} from ".";
+import { Answer as IAnswer } from ".";
 import { useQuestionCtx } from "../../hooks/useQuestion";
 import Answer from "./Anwser";
 
@@ -21,11 +21,11 @@ const QuestionText: FC = () => {
 			</h1>
 			<h1 className="text-2xl text-center mt-2 whitespace-pre-line">{state.question!.text}</h1>
 
-			<div className="w-full">
-				{state.question?.answers && state.question!.answers!.map((answer: IAnswer) => (
+			{state.question?.answers && <div className="w-full mt-4">
+				{state.question!.answers!.map((answer: IAnswer) => (
 					<Answer key={answer.id} {...answer} />
 				))}
-			</div>
+			</div>}
 
 			<h3 className="text-xl mt-4 text-center text-red-500">Uwaga: Zapisz swoją odpowiedź na kartce.</h3>
 		</div>
