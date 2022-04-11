@@ -7,7 +7,7 @@ interface State {
 	loading: boolean;
 	error: Error | null;
 	selected: string | null;
-	gid: number | null;
+	gid: string | null;
 }
 
 type Action =
