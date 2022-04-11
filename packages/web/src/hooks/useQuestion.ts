@@ -24,7 +24,7 @@ type Action =
 			payload: string;
 	} | {
 			type: "SET_GID";
-			payload: number;
+			payload: string;
 	};
 
 const reducer = (state: State, action: Action): State => {
