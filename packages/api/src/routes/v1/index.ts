@@ -14,7 +14,7 @@ router.get("/question/:qid", async (req, res) => {
 			message: "Invalid question id",
 		});
 	
-	if (typeof gid !== "string" || isNaN(Number(gid)))
+	if (typeof gid !== "string" || isNaN(Number(gid)) || Number(gid) < 1)
 		return res.status(400).json({
 			success: false,
 			data: null,
