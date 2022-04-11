@@ -99,7 +99,7 @@ export const useQuestion = (id?: string) => {
 		return () => {
 			mounted = false;
 		};
-	}, [idQuestio, state.gid]);
+	}, [idQuestion, state.gid]);
 
 	return {
 		...state,
