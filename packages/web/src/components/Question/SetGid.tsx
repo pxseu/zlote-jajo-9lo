@@ -1,9 +1,13 @@
-import React, { useState, FC } from "react";
+import React, { useState, useEffect, FC } from "react";
 import { useQuestionCtx } from "../../hooks/useQuestion";
 
 const QuestionText: FC = () => {
 	const state = useQuestionCtx();
     const [localId, setLocalId] = useState("")
+
+	useEffect(() => {
+		console.log(state)
+	}, [state])
 
 	if (state.gid !== null) {
 		return null;
