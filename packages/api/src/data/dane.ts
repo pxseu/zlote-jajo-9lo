@@ -447,7 +447,7 @@ export const DANE: Question[] = [
 				answers: null,
 			},
 			{
-				id: 2,
+				id: 3,
 				text: "Jaki jest najmniejszy gad na świecie?",
 				correct: "Kameleon",
 				answers: null,
